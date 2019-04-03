@@ -1,4 +1,4 @@
-name: snap-SheTech-2019
+name: shetech-sweetstyle
 version: 0.1.0
 summary: Snap Application to Demonstrate SnapCraft for SheTech-2019
 description: |
@@ -9,6 +9,10 @@ base: core18
 layout:
         /usr/games:
                 bind: $SNAP/usr/games
+parts:
+        sweetstyle:
+                source: .
+                plugin: dump
 apps:
-        sweetStyle:
-                command: sweetStyle
+        sweetstyle:
+                command: sweetstyle
