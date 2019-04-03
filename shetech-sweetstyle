@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# This command will take text as input and produce a fancy terminal output.
+
+echo "Hi $(date +%F_%T)"
