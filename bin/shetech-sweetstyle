@@ -2,16 +2,10 @@
 
 # This command will take text as input and produce a fancy terminal output.
 
-echo "Hi $(date +%F_%T)"
+# Pick a random border
+RAND=$(shuf -n1 -e ada-box boxquote boy c c-cmt caml capgirl cat columns diamonds diamonds dog girl ian_jones mouse nuke parchment scroll shell spring stark1 stone stark2 sunset underline unicornsay unicornthink whirly xes)
 
-echo "Checking for cowsay"
-which cowsay
-/usr/games/cowsay "$@"
-
-echo "Checking for boxes"
-which boxes
-
-echo "Checking for fortune"
-which fortune
-fortune
-
+#Display our text inside that border
+echo $@ | boxes -d $RAND -p a1 -a hcvc
+echo ""
+echo $@ | lolcat -a -d 60

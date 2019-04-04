@@ -6,20 +6,30 @@ description: |
         and provides a fancy output.
 confinement: devmode
 base: core18
+environment:
+        LANGUAGE: "en_US.UTF-8"
+        LANG: "en_US.UTF-8"
+        #        LC_ALL: "en_US.UTF-8"
 parts:
         shetech-sweetstyle:
                 source: .
                 plugin: dump
-                stage-packages: [ boxes, cowsay, fortune ]
-                #                filesets:
-                #                        programs: [ usr/share/*, usr/bin/*, usr/games/* ]
-                #                stage:
-                #                        - $programs
+                stage-packages: [ boxes, libtext-charwidth-perl, lolcat, coreutils, figlet ]
 layout:
         /usr/games:
                 bind: $SNAP/usr/games
         /usr/share:
                 bind: $SNAP/usr/share
+        /etc/boxes:
+                bind: $SNAP/etc/boxes
+        /usr/local/lib:
+                bind: $SNAP/usr/local/lib
+        /usr/lib/ruby:
+                bind: $SNAP/usr/lib/ruby
+        /usr/lib/x86_64-linux-gnu/ruby:
+                bind: $SNAP/usr/lib/x86_64-linux-gnu/ruby
+        /usr/bin/figlet:
+                bind-file: $SNAP/usr/bin/figlet
 apps:
         shetech-sweetstyle:
                 command: bin/shetech-sweetstyle
