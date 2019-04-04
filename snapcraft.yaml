@@ -10,9 +10,9 @@ layout:
         /usr/games:
                 bind: $SNAP/usr/games
 parts:
-        sweetstyle:
+        shetech-sweetstyle:
                 source: .
                 plugin: dump
 apps:
-        sweetstyle:
-                command: sweetstyle
+        shetech-sweetstyle:
+                command: shetech-sweetstyle
