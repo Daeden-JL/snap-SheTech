@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# This command will take text as input and produce a fancy terminal output.
+
+echo "Hi $(date +%F_%T)"
+
+echo "Checking for cowsay"
+which cowsay
+/usr/games/cowsay "$@"
+
+echo "Checking for boxes"
+which boxes
+
+echo "Checking for fortune"
+which fortune
+fortune
+

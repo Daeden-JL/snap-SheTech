@@ -6,15 +6,20 @@ description: |
         and provides a fancy output.
 confinement: devmode
 base: core18
-layout:
-        /usr/games:
-                bind: $SNAP/usr/games
-        /usr/share/cowsay/cows:
-                bind: $SNAP/usr/share/cowsay/cows
 parts:
         shetech-sweetstyle:
                 source: .
                 plugin: dump
+                stage-packages: [ boxes, cowsay, fortune ]
+                #                filesets:
+                #                        programs: [ usr/share/*, usr/bin/*, usr/games/* ]
+                #                stage:
+                #                        - $programs
+layout:
+        /usr/games:
+                bind: $SNAP/usr/games
+        /usr/share:
+                bind: $SNAP/usr/share
 apps:
         shetech-sweetstyle:
-                command: shetech-sweetstyle
+                command: bin/shetech-sweetstyle
