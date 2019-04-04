@@ -9,6 +9,8 @@ base: core18
 layout:
         /usr/games:
                 bind: $SNAP/usr/games
+        /usr/share/cowsay/cows:
+                bind: $SNAP/usr/share/cowsay/cows
 parts:
         shetech-sweetstyle:
                 source: .
