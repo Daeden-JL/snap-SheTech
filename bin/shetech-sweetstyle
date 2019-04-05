@@ -6,6 +6,7 @@
 RAND=$(shuf -n1 -e ada-box boxquote boy c c-cmt caml capgirl cat columns diamonds diamonds dog girl ian_jones mouse nuke parchment scroll shell spring stark1 stone stark2 sunset underline unicornsay unicornthink whirly xes)
 
 #Display our text inside that border
+echo ""
 echo $@ | boxes -d $RAND -p a1 -a hcvc
 echo ""
-echo $@ | lolcat -a -d 60
+# echo $@ | lolcat -a -d 60

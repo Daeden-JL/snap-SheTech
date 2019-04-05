@@ -4,12 +4,11 @@ summary: Snap Application to Demonstrate SnapCraft for SheTech-2019
 description: |
         This application takes text as input
         and provides a fancy output.
-confinement: devmode
+confinement: strict
 base: core18
 environment:
         LANGUAGE: "en_US.UTF-8"
         LANG: "en_US.UTF-8"
-        #        LC_ALL: "en_US.UTF-8"
 parts:
         shetech-sweetstyle:
                 source: .
