@@ -14,7 +14,7 @@ parts:
         shetech-sweetstyle:
                 source: .
                 plugin: dump
-                stage-packages: [ boxes, libtext-charwidth-perl, lolcat, coreutils, figlet, fortune ]
+                stage-packages: [ boxes, libtext-charwidth-perl, lolcat, coreutils ]
 layout:
         /usr/games:
                 bind: $SNAP/usr/games
