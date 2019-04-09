@@ -1,9 +1,10 @@
 name: shetech-sweetstyle
-version: 0.1.0
+version: 0.2.0
 summary: Snap Application to Demonstrate SnapCraft for SheTech-2019
 description: |
         This application takes text as input
         and provides a fancy output.
+        Now with Color!
 confinement: strict
 base: core18
 environment:
@@ -13,7 +14,7 @@ parts:
         shetech-sweetstyle:
                 source: .
                 plugin: dump
-                stage-packages: [ boxes, libtext-charwidth-perl, lolcat, coreutils, figlet ]
+                stage-packages: [ boxes, libtext-charwidth-perl, lolcat, coreutils, figlet, fortune ]
 layout:
         /usr/games:
                 bind: $SNAP/usr/games
